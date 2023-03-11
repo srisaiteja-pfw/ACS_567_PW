@@ -1,6 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FinTech",
+    "\\FinTech\\FinTech",
+    "\\FinTech\\FinTech\\bin",
+    "\\FinTech\\FinTech\\bin\\Debug",
+    "\\FinTech\\FinTech\\bin\\Debug\\net6.0",
+    "\\FinTech\\FinTech\\Controllers",
+    "\\FinTech\\FinTech\\Data",
+    "\\FinTech\\FinTech\\Models",
+    "\\FinTech\\FinTech\\Repositories"
   ],
+  "SelectedNode": "\\FinTech\\FinTech\\bin\\Debug\\net6.0",
   "PreviewInSolutionExplorer": false
 }
