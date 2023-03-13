@@ -91,30 +91,38 @@ namespace HW.Repositories
         /// Data Analysis method to calculate min,max and average of the amount
         /// </summary>
         /// <returns>Returns min, max,average of the amount </returns>
-        //public DataAnalysis DataAnalysis()
-        //{
-        //    //System.Diagnostics.Debug.WriteLine("Context:"+_context);
+        public Dictionary<string, dynamic> analyzeBill()
+        {
 
-        //    var result = new List<double>();
-        //    foreach (MonthlyBill i in _context.MonthlyBill)
-        //    {
-        //        result.Add(i.Amount);
-        //        //System.Diagnostics.Debug.WriteLine("Monthly bill" + i);
-        //        //if (i.Amount >= max)
-        //        //{
-        //        //    bill = i;
-        //        //    max = i.Amount;
-        //        //}
-        //    }
+            List<FinTechModel> data = _context.monthly_expenses.ToList();
+            List<int> numbers = data
+                            .Select(num => num.Expense)
+                            .ToList();
 
-        //    DataAnalysis dataAnalysis = new DataAnalysis();
+            Dictionary<string, dynamic> analysis = new();
+            // calculate the mean of the numbers
+            double mean = numbers.Average();
 
-        //    dataAnalysis.min = result.Min();
-        //    dataAnalysis.max = result.Max();
-        //    dataAnalysis.average = result.Average();
+            // calculate the median of the numbers
+            int halfIndex = numbers.Count() / 2;
+            var sortedNumbers = numbers.OrderBy(n => n);
 
-        //    return dataAnalysis;
-        //}
+            int median;
+
+            if ((numbers.Count() % 2) == 0)
+                median = (sortedNumbers.ElementAt(halfIndex) + sortedNumbers.ElementAt(halfIndex - 1)) / 2;
+            else
+                median = sortedNumbers.ElementAt(halfIndex);
+
+            analysis.Add("Mean", mean);
+            analysis.Add("Median", median);
+            analysis.Add("Most Amount was Spent on ", data.FirstOrDefault(a => a.Expense == numbers.Max())?.Category ?? string.Empty);
+            analysis.Add("Amount ", numbers.Max());
+            analysis.Add("Least Amount was Spent on", data.FirstOrDefault(a => a.Expense == numbers.Min())?.Category ?? string.Empty);
+            analysis.Add("Amount Spent ", numbers.Min());
+
+            return analysis;
+        }
 
         /// <summary>
         /// Save changes to database

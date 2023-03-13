@@ -16,7 +16,11 @@ namespace HW.Interfaces
 
         bool DeleteAccount(Fintech account);
 
-        //DataAnalysis DataAnalysis();
+        /// <summary>
+        /// returns a dictionary of string and dynamic objects with the analysis results.
+        /// </summary>
+        /// <returns></returns>
+        Dictionary<string, dynamic> analyzeBill();
         bool Save();
     }
 }
