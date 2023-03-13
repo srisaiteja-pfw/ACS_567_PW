@@ -24,7 +24,9 @@ namespace FinTech.Repositories
 
         public Dictionary<string, dynamic> analyzeBill()
         {
-            List<int> numbers = _context.monthly_expenses
+
+            List<FinTechModel> data = _context.monthly_expenses.ToList();
+            List<int> numbers = data
                             .Select(num => num.Expense)
                             .ToList();
 
@@ -43,11 +45,12 @@ namespace FinTech.Repositories
             else
                 median = sortedNumbers.ElementAt(halfIndex);
 
-
             analysis.Add("Mean", mean);
             analysis.Add("Median", median);
-            analysis.Add("Max", numbers.Max());
-            analysis.Add("Min", numbers.Min());
+            analysis.Add("Most Amount was Spent on ", data.FirstOrDefault(a => a.Expense == numbers.Max())?.Category ?? string.Empty);
+            analysis.Add("Amount ", numbers.Max());
+            analysis.Add("Least Amount was Spent on", data.FirstOrDefault(a => a.Expense == numbers.Min())?.Category ?? string.Empty);
+            analysis.Add("Amount Spent ", numbers.Min());
 
             return analysis;
         }
