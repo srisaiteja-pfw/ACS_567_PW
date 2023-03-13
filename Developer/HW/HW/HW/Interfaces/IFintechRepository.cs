@@ -14,7 +14,7 @@ namespace HW.Interfaces
 
         bool EditAccount(Fintech account);
 
-        bool DeleteAccount(Fintech account);
+        bool DeleteAccount(int  id);
 
         /// <summary>
         /// returns a dictionary of string and dynamic objects with the analysis results.

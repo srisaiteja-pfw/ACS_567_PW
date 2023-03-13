@@ -42,6 +42,9 @@ namespace HW.Repositories
             return _context.Fintech.Where(account => account.Id == id).FirstOrDefault();
         }
 
+
+       
+
         /// <summary>
         /// The FintechExists method checks if account exists or not 
         /// </summary>
@@ -80,9 +83,14 @@ namespace HW.Repositories
 		/// </summary>
 		/// <param name="account"></param>
 		/// <returns>returns item deleted and null if not found </returns>
-        public bool DeleteAccount(Fintech account)
+        public bool DeleteAccount(int id)
         {
-            _context.Remove(account);
+            var items = _context.Fintech.Where(account => account.Id == id);
+            foreach (var account in items)
+            {
+                _context.Remove(account);
+            }
+
             return Save();
         }
 

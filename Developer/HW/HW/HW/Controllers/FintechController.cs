@@ -112,7 +112,7 @@ namespace FintechRestAPI.Controllers
             }
 
             bool result = _fintech.AddAccount(account);
-            return result ? Ok(result) : BadRequest();
+            return result ? Ok("Account has been created") : BadRequest();
         }
 
 
@@ -143,12 +143,12 @@ namespace FintechRestAPI.Controllers
         /// </summary>
         /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
 
-        [HttpDelete]
-        public IActionResult DeleteAccount(Fintech account)
+        [HttpDelete("{id}")]
+        public IActionResult DeleteAccount(int id)
         {
-            bool result = _fintech.DeleteAccount(account);
+            bool result = _fintech.DeleteAccount(id);
 
-            return result ? Ok(result) : BadRequest();
+            return result ? Ok("Account is Deleted") : BadRequest();
         }
 
 
