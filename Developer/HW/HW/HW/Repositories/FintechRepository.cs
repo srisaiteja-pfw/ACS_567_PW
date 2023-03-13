@@ -43,6 +43,17 @@ namespace HW.Repositories
         }
 
         /// <summary>
+        /// Fetching balance by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>returns response based on the id</returns>
+        public Double GetCurrentBankBalance(int id)
+        {
+            var item = _context.Fintech.Where(account => account.Id == id).FirstOrDefault();
+            return item.Balance;
+        }
+
+        /// <summary>
         /// The FintechExists method checks if account exists or not 
         /// </summary>
         /// <param name="id"></param>

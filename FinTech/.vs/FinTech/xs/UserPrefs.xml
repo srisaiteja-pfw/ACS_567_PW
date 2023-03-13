@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{C1AABB01-0021-401C-A0B2-44ED9D57D7A7}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FinTech/Controllers/FintechController.cs">
+    <Files>
+      <File FileName="FinTech/Program.cs" Line="1" Column="1" />
+      <File FileName="FinTech/Controllers/FintechController.cs" Line="9" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="FinTech">
+            <Node name="FinTech">
+              <Node name="Controllers">
+                <Node name="FintechController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.FinTech PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

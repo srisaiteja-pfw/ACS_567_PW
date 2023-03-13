@@ -16,6 +16,8 @@ namespace HW.Interfaces
 
         bool DeleteAccount(Fintech account);
 
+        double GetCurrentBankBalance(int id);
+
         //DataAnalysis DataAnalysis();
         bool Save();
     }

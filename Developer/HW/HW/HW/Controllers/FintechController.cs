@@ -152,22 +152,42 @@ namespace FintechRestAPI.Controllers
         }
 
 
-
-
         /// <summary>
-        /// Action for calculating max, min, average of amount
+        /// Action for getting bank balance based on id
         /// </summary>
-        /// <returns>returns max, min, average</returns>
+        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
+        [HttpGet("getBanlance/{id}")]
+        [ProducesResponseType(200, Type = typeof(Fintech))]
+        [ProducesResponseType(404)]
 
-        //[HttpGet("DataAnalysis")]
-        //[ProducesResponseType(200)]
-        //public IActionResult GetDataAnalysis()
-        //{
-        //    _logger.Log(LogLevel.Information, "Get analysis");
-        //    return Ok(_monthlyBill.DataAnalysis());
-        //}
+        public IActionResult GetCurrentBankBalance(int id)
+        {
+           double get_data = _fintech.GetCurrentBankBalance(id);
+            if (get_data == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(get_data);
+            }
 
-    }
+
+
+            /// <summary>
+            /// Action for calculating max, min, average of amount
+            /// </summary>
+            /// <returns>returns max, min, average</returns>
+
+            //[HttpGet("DataAnalysis")]
+            //[ProducesResponseType(200)]
+            //public IActionResult GetDataAnalysis()
+            //{
+            //    _logger.Log(LogLevel.Information, "Get analysis");
+            //    return Ok(_monthlyBill.DataAnalysis());
+            //}
+
+        }
 
 
 

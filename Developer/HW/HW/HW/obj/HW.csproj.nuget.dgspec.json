@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Vruddhi\\Desktop\\ACS_567_HWK\\HW\\HW\\HW\\HW.csproj": {}
+    "/Users/srisaiteja.s/Desktop/SPM_PW_G8/ACS_567_PW_G8/Developer/HW/HW/HW/HW.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Vruddhi\\Desktop\\ACS_567_HWK\\HW\\HW\\HW\\HW.csproj": {
+    "/Users/srisaiteja.s/Desktop/SPM_PW_G8/ACS_567_PW_G8/Developer/HW/HW/HW/HW.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Vruddhi\\Desktop\\ACS_567_HWK\\HW\\HW\\HW\\HW.csproj",
+        "projectUniqueName": "/Users/srisaiteja.s/Desktop/SPM_PW_G8/ACS_567_PW_G8/Developer/HW/HW/HW/HW.csproj",
         "projectName": "HW",
-        "projectPath": "C:\\Users\\Vruddhi\\Desktop\\ACS_567_HWK\\HW\\HW\\HW\\HW.csproj",
-        "packagesPath": "C:\\Users\\Vruddhi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Vruddhi\\Desktop\\ACS_567_HWK\\HW\\HW\\HW\\obj\\",
+        "projectPath": "/Users/srisaiteja.s/Desktop/SPM_PW_G8/ACS_567_PW_G8/Developer/HW/HW/HW/HW.csproj",
+        "packagesPath": "/Users/srisaiteja.s/.nuget/packages/",
+        "outputPath": "/Users/srisaiteja.s/Desktop/SPM_PW_G8/ACS_567_PW_G8/Developer/HW/HW/HW/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Vruddhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/srisaiteja.s/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -88,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }
