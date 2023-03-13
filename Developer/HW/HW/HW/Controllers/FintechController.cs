@@ -112,7 +112,7 @@ namespace FintechRestAPI.Controllers
             }
 
             bool result = _fintech.AddAccount(account);
-            return result ? Ok(result) : BadRequest();
+            return result ? Ok("Account has been created") : BadRequest();
         }
 
 
@@ -143,29 +143,28 @@ namespace FintechRestAPI.Controllers
         /// </summary>
         /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
 
-        [HttpDelete]
-        public IActionResult DeleteAccount(Fintech account)
+        [HttpDelete("{id}")]
+        public IActionResult DeleteAccount(int id)
         {
-            bool result = _fintech.DeleteAccount(account);
+            bool result = _fintech.DeleteAccount(id);
 
-            return result ? Ok(result) : BadRequest();
+            return result ? Ok("Account is Deleted") : BadRequest();
         }
 
 
 
 
         /// <summary>
-        /// Action for calculating max, min, average of amount
+        /// //This is a get request to Analyse mean, median and mode.
         /// </summary>
-        /// <returns>returns max, min, average</returns>
+        /// <returns></returns>
 
-        //[HttpGet("DataAnalysis")]
-        //[ProducesResponseType(200)]
-        //public IActionResult GetDataAnalysis()
-        //{
-        //    _logger.Log(LogLevel.Information, "Get analysis");
-        //    return Ok(_monthlyBill.DataAnalysis());
-        //}
+        [HttpGet("Analyse")]
+        public IActionResult Analyse()
+        {
+            return Ok(_fintech.analyzeBill());
+
+        }
 
     }
 

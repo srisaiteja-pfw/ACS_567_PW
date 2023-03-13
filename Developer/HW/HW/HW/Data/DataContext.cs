@@ -14,5 +14,6 @@ namespace HW.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         { }
         public DbSet<Fintech> Fintech { get; set; }
+        public DbSet<FinTechModel> monthly_expenses { get; set; }
     }
 }
