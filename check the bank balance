@@ -1,0 +1,28 @@
+using System;
+
+class BankAccount
+{
+    private double balance;
+
+    public BankAccount(double initialBalance)
+    {
+        balance = initialBalance;
+    }
+
+    public void CheckBalance()
+    {
+        Console.WriteLine($"Your current balance is {balance:C2}");
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create a new bank account with an initial balance of 1000.00
+        BankAccount myAccount = new BankAccount(10234765.00);
+
+        // Check the current balance
+        myAccount.CheckBalance();
+    }
+}
