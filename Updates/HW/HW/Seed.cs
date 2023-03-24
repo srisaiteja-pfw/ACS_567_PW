@@ -27,6 +27,20 @@ public class Seed
             dataContext.Fintech.AddRange(bill);
             dataContext.SaveChanges();
         }
+        if (!dataContext.monthly_expenses.Any())
+        {
+            List<FinTechModel> fintech = new()
+                {
+                    new FinTechModel {Account_number = 10001, Id = 1, Date = "2023-07-03", Category ="Grocery", Expense = 230},
+                    new FinTechModel {Account_number = 10001, Id = 2, Date = "2023-07-03", Category ="Gas", Expense = 40},
+
+                };
+
+
+            dataContext.monthly_expenses.AddRange(fintech);//Saving contents into the database
+                                                           //dataContext.SaveChanges();
+
+        }
     }
 
 }

@@ -181,18 +181,112 @@ namespace FintechRestAPI.Controllers
 
 
 
-        /// <summary>
-        /// Action for calculating max, min, average of amount
-        /// </summary>
-        /// <returns>returns max, min, average</returns>
 
-        //[HttpGet("DataAnalysis")]
-        //[ProducesResponseType(200)]
-        //public IActionResult GetDataAnalysis()
-        //{
-        //    _logger.Log(LogLevel.Information, "Get analysis");
-        //    return Ok(_monthlyBill.DataAnalysis());
-        //}
+        /// <summary>
+        /// Action for getting Item
+        /// </summary>
+        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
+        [HttpGet("GetAllExpenses")]
+        [ProducesResponseType(200, Type = typeof(List<FinTechModel>))]
+
+        public IActionResult getAllExpenses()
+        {
+            _logger.Log(LogLevel.Information, "Get All Expenses");
+            return Ok(_fintech.getAllExpenses());
+        }
+
+        /// <summary>
+        /// Action for getting Item based on id
+        /// </summary>
+        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
+        [HttpGet("GetExpenses")]
+        [ProducesResponseType(200, Type = typeof(Fintech))]
+        [ProducesResponseType(404)]
+
+        public IActionResult GetExpense(int id)
+        {
+            FinTechModel get_data = _fintech.GetExpense(id);
+            if (get_data == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(get_data);
+            }
+
+        }
+
+
+
+        /// <summary>
+        /// Action for creating Expense
+        /// </summary>
+        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
+
+        [HttpPost("AddExpense")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+
+        public IActionResult AddExpense([FromBody] FinTechModel expense)
+        {
+            if (expense == null)
+            {
+                return BadRequest("Expense is null");
+            }
+
+            bool result = _fintech.AddExpense(expense);
+            return result ? Ok("Expense has been created") : BadRequest();
+        }
+
+
+        /// <summary>
+        /// Action for updating Item
+        /// </summary>
+        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
+
+        [HttpPut("UpdateExpense")]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+
+        public IActionResult UpdateExpense([FromBody] FinTechModel updated)
+        {
+            if (updated == null)
+            {
+                return BadRequest("Expense is null");
+            }
+            bool result = _fintech.UpdateExpense(updated);
+
+            return result ? Ok("Expense has been updated") : BadRequest();
+        }
+
+
+        /// <summary>
+        /// Action for deleting Item
+        /// </summary>
+        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
+
+        [HttpDelete("DeleteExpense")]
+        public IActionResult DeleteExpense(int id)
+        {
+            bool result = _fintech.DeleteExpense(id);
+
+            return result ? Ok("Expense is Deleted") : BadRequest();
+        }
+
+        /// <summary>
+        ///This is a get request to Analyse mean, median and mode.
+        /// </summary>
+        /// <returns></returns>
+
+        [HttpGet("Analyse")]
+        public IActionResult Analyse()
+        {
+            return Ok(_fintech.analyzeBill());
+
+        }
+
 
     }
 

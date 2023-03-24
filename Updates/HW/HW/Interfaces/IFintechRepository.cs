@@ -18,6 +18,18 @@ namespace HW.Interfaces
 
         bool DeleteAccount(int  id);
 
+        ICollection<FinTechModel> getAllExpenses();
+
+        FinTechModel GetExpense(int id);
+
+        bool AddExpense(FinTechModel expense);
+
+        bool UpdateExpense(FinTechModel expense);
+
+        bool DeleteExpense(int id);
+
+        Dictionary<string, dynamic> analyzeBill();
+
         //DataAnalysis DataAnalysis();
         bool Save();
     }
