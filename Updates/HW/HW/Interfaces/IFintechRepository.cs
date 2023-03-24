@@ -10,6 +10,8 @@ namespace HW.Interfaces
 
         bool AccountExists(int id);
 
+        bool CustomerService(int id);
+
         bool AddAccount(Fintech account);
 
         bool EditAccount(Fintech account);
