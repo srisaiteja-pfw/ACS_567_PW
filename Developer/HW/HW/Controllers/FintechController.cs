@@ -94,6 +94,31 @@ namespace FintechRestAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// Action for providing customer service
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
+
+        [HttpGet("CustomerService")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+
+        public IActionResult CustomerService(int id)
+        {
+            bool result = _fintech.CustomerService(id);
+
+            if (!result)
+            {
+                return NotFound("No matching id");
+            }
+            else
+            {
+                return Ok("Contact Customer Service Phone number at 1-888-888-2400 or Email on help@gmail.com");
+            }
+        }
+
 
         /// <summary>
         /// Action for creating Item

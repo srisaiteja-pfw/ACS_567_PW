@@ -53,6 +53,16 @@ namespace HW.Repositories
         }
 
         /// <summary>
+        /// The CustomerService method provides help
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Returns true, provides help</returns>
+        public bool CustomerService(int id)
+        {
+            return _context.Fintech.Any(account => account.Id == id);
+        }
+
+        /// <summary>
 		/// The addItem method adds to the response
 		/// </summary>
 		/// <param name="account"></param>
