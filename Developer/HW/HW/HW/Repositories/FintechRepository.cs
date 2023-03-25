@@ -57,9 +57,30 @@ namespace HW.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Returns true, provides help</returns>
-        public bool CustomerService(int id)
+        public string CustomerService()
         {
-            return _context.Fintech.Any(account => account.Id == id);
+            return "Contact Customer Service Phone number at 1-888-888-2400 or Email on help@gmail.com";
+        }
+
+        /// <summary>
+        /// This method will get customer service request based on id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Customer Service Request</returns>
+        public CustomerService  GetCustomerServiceById(int id)
+        {
+            return _context.customerservice.Where(account => account.Id == id).FirstOrDefault();
+        }
+
+        /// <summary>
+        /// This method will create new Customer Service Request
+        /// </summary>
+        /// <param name="customerService"></param>
+        /// <returns>Returns true and updates in database</returns>
+        public bool CreateCustomerService(CustomerService customerService)
+        {
+            _context.customerservice.AddAsync(customerService);
+            return Save();
         }
 
         /// <summary>

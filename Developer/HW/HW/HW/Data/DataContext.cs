@@ -15,5 +15,7 @@ namespace HW.Data
         { }
         public DbSet<Fintech> Fintech { get; set; }
         public DbSet<FinTechModel> monthly_expenses { get; set; }
+
+        public DbSet<CustomerService> customerservice { get; set; }
     }
 }

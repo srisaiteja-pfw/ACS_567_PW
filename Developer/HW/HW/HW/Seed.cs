@@ -41,6 +41,20 @@ public class Seed
                                                            //dataContext.SaveChanges();
 
         }
+        if (!dataContext.customerservice.Any())
+        {
+            List<CustomerService> customerservice = new()
+                {
+                    new CustomerService {Id = 1 ,CustomerServiceDescription = "Withdraw Issue", PhoneNumber = "2546548796", Date = "2023-02-12"},
+                    new CustomerService {Id = 2 ,CustomerServiceDescription = "Transfer Issue", PhoneNumber = "2604514789", Date = "2023-03-24"},
+
+                };
+
+
+            dataContext.customerservice.AddRange(customerservice);//Saving contents into the database
+                                                           //dataContext.SaveChanges();
+
+        }
     }
 
 }

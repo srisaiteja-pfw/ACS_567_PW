@@ -95,7 +95,7 @@ namespace FintechRestAPI.Controllers
         }
 
         /// <summary>
-        /// Action for providing customer service
+        /// Action for providing customer service contact
         /// 
         /// </summary>
         /// <param name="id"></param>
@@ -105,19 +105,63 @@ namespace FintechRestAPI.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
 
-        public IActionResult CustomerService(int id)
+        public IActionResult CustomerService()
         {
-            bool result = _fintech.CustomerService(id);
+            return Ok(_fintech.CustomerService());
+        }
 
-            if (!result)
+        /// <summary>
+        /// Action to view customer service requests
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
+
+        [HttpGet("GetCustomerServiceById")]
+        [ProducesResponseType(200, Type = typeof(CustomerService))]
+        [ProducesResponseType(404)]
+        public IActionResult GetCustomerServiceById(int id)
+        {
+            CustomerService customerservice = _fintech.GetCustomerServiceById(id);
+            if (customerservice == null)
             {
-                return NotFound("No matching id");
+                return NotFound();
             }
             else
             {
-                return Ok("Contact Customer Service Phone number at 1-888-888-2400 or Email on help@gmail.com");
+                return Ok(customerservice);
             }
+
         }
+
+        /// <summary>
+        /// Action to create new customer service requests
+        /// </summary>
+        /// <param name="customerServiceDto"></param>
+        /// <returns>action will return a 200 Ok status code and update in database</returns>
+
+        [HttpPost("CreateCustomerService")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public IActionResult CreateCustomerService([FromBody] CustomerService customerservice)
+        {
+            //var customerservice = new CustomerService()
+            //{
+            //    PhoneNumber = customerServiceDto.PhoneNumber,
+            //    CustomerServiceDescription = customerServiceDto.CustomerServiceDescription,
+            //    Date = customerServiceDto.Date,
+            //};
+
+            if (customerservice == null)
+            {
+                return BadRequest("Customer Service is null");
+            }
+
+            bool result = _fintech.CreateCustomerService(customerservice);
+            return result ? Ok("Customer Service Request created") : BadRequest();
+        }
+        
+            
+
 
 
         /// <summary>
