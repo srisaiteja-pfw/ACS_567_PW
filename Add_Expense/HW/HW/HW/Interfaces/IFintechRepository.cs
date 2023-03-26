@@ -113,6 +113,14 @@ namespace HW.Interfaces
         bool WithdrawAmount(int id, double amount);
 
         /// <summary>
+        /// Depositing Checks
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="Check_Amount"></param>
+        /// <returns></returns>
+        bool DepositCheck (int id, double Check_Amount);
+
+        /// <summary>
         /// Save changes to databse
         /// </summary>
         /// <returns></returns>

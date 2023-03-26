@@ -245,6 +245,19 @@ namespace HW.Repositories
             return Save();
         }
 
+        public bool DepositCheck(int id, double Check_Amount) 
+        {
+            var account = _context.Fintech.FirstOrDefault(a=>a.Id == id);
+            if(account == null)
+            {
+                return false;
+            }
+            account.Balance += Check_Amount;
+            _context.Update(account);
+            return Save();
+
+        }
+
         /// <summary>
         /// Save changes to database
         /// </summary>
