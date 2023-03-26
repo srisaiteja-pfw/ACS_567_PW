@@ -151,7 +151,25 @@ namespace FintechRestAPI.Controllers
             return result ? Ok("Account is Deleted") : BadRequest();
         }
 
+        /// <summary>
+        /// Action for creating Expense
+        /// </summary>
+        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
 
+        [HttpPost("AddExpense")]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+
+        public IActionResult AddExpense([FromBody] FinTechModel expense)
+        {
+            if (expense == null)
+            {
+                return BadRequest("Expense is null");
+            }
+
+            bool result = _fintech.AddExpense(expense);
+            return result ? Ok("Expense has been created") : BadRequest();
+        }
 
 
         /// <summary>

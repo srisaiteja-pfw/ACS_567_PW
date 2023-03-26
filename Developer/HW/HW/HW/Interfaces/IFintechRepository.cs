@@ -16,6 +16,8 @@ namespace HW.Interfaces
 
         bool DeleteAccount(int  id);
 
+        bool AddExpense(FinTechModel expense);
+
         /// <summary>
         /// returns a dictionary of string and dynamic objects with the analysis results.
         /// </summary>

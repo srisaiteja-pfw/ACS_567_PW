@@ -94,7 +94,18 @@ namespace HW.Repositories
             return Save();
         }
 
+        /// <summary>
+        /// The addExpense method adds to the response
+        /// </summary>
+        /// <param name="account"></param>
+        /// <returns>returns true if successfully added</returns>
+        public bool AddExpense(FinTechModel expense)
+        {
+            _context.Add(expense);
+            return Save();
+        }
 
+       
         /// <summary>
         /// Data Analysis method to calculate min,max and average of the amount
         /// </summary>

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Furqan Khan\\source\\repos\\ACS_567_PW_G8\\Developer\\HW\\HW\\HW\\HW.csproj": {}
+    "D:\\Furqan\\ACS_567_PW_G8\\Developer\\HW\\HW\\HW\\HW.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Furqan Khan\\source\\repos\\ACS_567_PW_G8\\Developer\\HW\\HW\\HW\\HW.csproj": {
+    "D:\\Furqan\\ACS_567_PW_G8\\Developer\\HW\\HW\\HW\\HW.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Furqan Khan\\source\\repos\\ACS_567_PW_G8\\Developer\\HW\\HW\\HW\\HW.csproj",
+        "projectUniqueName": "D:\\Furqan\\ACS_567_PW_G8\\Developer\\HW\\HW\\HW\\HW.csproj",
         "projectName": "HW",
-        "projectPath": "C:\\Users\\Furqan Khan\\source\\repos\\ACS_567_PW_G8\\Developer\\HW\\HW\\HW\\HW.csproj",
+        "projectPath": "D:\\Furqan\\ACS_567_PW_G8\\Developer\\HW\\HW\\HW\\HW.csproj",
         "packagesPath": "C:\\Users\\Furqan Khan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Furqan Khan\\source\\repos\\ACS_567_PW_G8\\Developer\\HW\\HW\\HW\\obj\\",
+        "outputPath": "D:\\Furqan\\ACS_567_PW_G8\\Developer\\HW\\HW\\HW\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
