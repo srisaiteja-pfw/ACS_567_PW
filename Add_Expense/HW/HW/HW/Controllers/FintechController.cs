@@ -348,6 +348,23 @@ namespace FintechRestAPI.Controllers
             return result ? Ok("Amount has been withdrawn") : BadRequest("Insufficient Funds");
         }
 
+        [HttpPut("DepositChecks/{id}")]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+
+        public IActionResult DepositCheck(int id, double Check_Amount)
+        {
+            Fintech account = _fintech.GetItem(id);
+            if(account == null)
+            {
+                return NotFound();
+            }
+
+            bool result = _fintech.DepositCheck(id, Check_Amount);
+            return result ? Ok("Check Successfully Deposited") : BadRequest("Check Deposit Failed");
+        }
+
 
 
 
