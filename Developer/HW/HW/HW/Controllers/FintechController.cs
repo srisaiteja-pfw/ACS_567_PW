@@ -330,7 +330,18 @@ namespace FintechRestAPI.Controllers
             return Ok(_fintech.analyzeBill());
 
         }
+        /// <summary>
+        /// Action for tranferring amount from one account to another
+        /// </summary>
+        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
 
+        [HttpPost("TransferAmount")]
+        public IActionResult TransferAmount(TransferFunds t1, TransferFunds t2)
+        {
+            string result = _fintech.TranferFunds(t1, t2);
+
+            return result.Length > 0 ? Ok(result) : BadRequest();
+        }
 
     }
 
