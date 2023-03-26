@@ -335,13 +335,15 @@ namespace FintechRestAPI.Controllers
         /// </summary>
         /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
 
-        [HttpPost("TransferAmount")]
+        [HttpPost("transfer")]
         public IActionResult TransferAmount(TransferFunds t1, TransferFunds t2)
         {
             string result = _fintech.TranferFunds(t1, t2);
 
             return result.Length > 0 ? Ok(result) : BadRequest();
         }
+
+
 
     }
 

@@ -331,6 +331,27 @@ namespace FintechRestAPI.Controllers
 
         }
 
+        [HttpPut("WithdrawAmount/{id}")]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+
+        public IActionResult WithdrawAmount(int id, double amount)
+        {
+            Fintech account= _fintech.GetItem(id);
+            if(account == null)
+            {
+                return NotFound();
+            }
+
+            bool result = _fintech.WithdrawAmount(id, amount);
+            return result ? Ok("Amount has been withdrawn") : BadRequest("Insufficient Funds");
+        }
+
+
+
+
+
 
     }
 
