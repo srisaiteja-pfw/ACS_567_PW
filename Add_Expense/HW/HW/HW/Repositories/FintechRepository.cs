@@ -221,7 +221,29 @@ namespace HW.Repositories
             return analysis;
         }
 
+        /// <summary>
+        /// Withdrawl Method
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        public bool WithdrawAmount(int id, double amount)
+        {
+            var account = _context.Fintech.FirstOrDefault(a => a.Id == id);
+            if (account == null)
+            {
+                return false;
+            }
 
+            if (account.Balance < amount)
+            {
+                return false;
+            }
+
+            account.Balance -= amount;
+            _context.Update(account);
+            return Save();
+        }
 
         /// <summary>
         /// Save changes to database

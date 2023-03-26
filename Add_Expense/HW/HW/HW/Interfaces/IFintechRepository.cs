@@ -105,6 +105,14 @@ namespace HW.Interfaces
         Dictionary<string, dynamic> analyzeBill();
 
         /// <summary>
+        /// Withdrawing money function
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        bool WithdrawAmount(int id, double amount);
+
+        /// <summary>
         /// Save changes to databse
         /// </summary>
         /// <returns></returns>
