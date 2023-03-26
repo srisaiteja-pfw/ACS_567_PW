@@ -221,7 +221,33 @@ namespace HW.Repositories
             return analysis;
         }
 
+        /// <summary>
+        /// Takes sender's and receiver's details for transfer
+        /// </summary>
+        /// <returns>Success or failure message</returns>
+        public string TranferFunds(TransferFunds sender, TransferFunds receiver)
+        {
+            Fintech senderAccount = _context.Fintech.Where(account => account.Id == sender.Id).FirstOrDefault();
+            Fintech receiverAccount = _context.Fintech.Where(account => account.Id == receiver.Id).FirstOrDefault();
+            double senderBalance = senderAccount.Balance;
 
+            /// <summary>
+            /// Making sure if the sender has bore balance in his account than requested for transfer
+            /// </summary>
+            /// <returns>Returns min, max,average of the amount </returns>
+            if (senderBalance < sender.Amount)
+            {
+                return "Not enoght balance in your account!";
+            }
+            else
+            {
+                senderAccount.Balance -= sender.Amount;
+                receiverAccount.Balance += sender.Amount;
+            }
+            _context.Update(senderAccount);
+            _context.Update(receiverAccount);
+            return "The transfer of " + sender.Amount + " from " + sender.Id + " to " + receiver.Id + " has been successful!";
+        }
 
         /// <summary>
         /// Save changes to database
