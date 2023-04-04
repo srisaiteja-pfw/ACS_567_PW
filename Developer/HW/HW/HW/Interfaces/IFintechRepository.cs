@@ -33,6 +33,8 @@ namespace HW.Interfaces
 
         Dictionary<string, dynamic> analyzeBill();
 
+        string TranferFunds(TransferFunds t1, TransferFunds t2);
+
         //DataAnalysis DataAnalysis();
         bool Save();
     }
