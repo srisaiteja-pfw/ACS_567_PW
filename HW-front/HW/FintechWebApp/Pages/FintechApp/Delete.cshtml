@@ -15,7 +15,7 @@
 
 
 <!-- Display a form for deleting the account -->
-<form method="POST">
+<form method="POST" onsubmit="handleSubmit(event)">
 	<input type="hidden" name="id" value="@Model.fintech.Id" />
 	<!-- Store the account ID in a hidden input field -->
 	<table>
@@ -54,5 +54,12 @@
 	</table>
 	<p></p>
 	<!-- Display a button for submitting the form to delete the account -->
-	<input type="submit" value= "Delete" class="btn btn-primary" />
+	<input type="" value= "Delete" class="btn btn-primary" />
+
+	<script>
+		function handleSubmit(event) {
+			alert("The account has been deleted");
+		}
+	</script>
+
 </form>

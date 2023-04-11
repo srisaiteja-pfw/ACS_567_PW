@@ -13,7 +13,7 @@
 	<div>@Model.errorMessage</div>
 }
 
-<form method="POST">
+<form method="POST" onsubmit="handleSubmit(event)">
 	<input type="hidden" name="id" value="@Model.fintech.Id" />
 	<table>
 		<tr>
@@ -57,4 +57,10 @@
 	}
 	<!-- Display a button for submitting the form to edit the bill -->
 	<input type="submit" value="Edit" class="btn btn-primary" />
+
+	<script>
+		function handleSubmit(event) {
+			alert("The account has been updated successfully");
+		}
+	</script>
 </form>

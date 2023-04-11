@@ -9,57 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FintechWebApp
 build_property.RootNamespace = FintechWebApp
-build_property.ProjectDir = D:\HW-front\HW\FintechWebApp\
+build_property.ProjectDir = D:\SPM-Apr\ACS_567_PW_G8\HW-front\HW\FintechWebApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\HW-front\HW\FintechWebApp
+build_property.MSBuildProjectDirectory = D:\SPM-Apr\ACS_567_PW_G8\HW-front\HW\FintechWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/HW-front/HW/FintechWebApp/Index.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = SW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/Error.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/FintechApp/Analyse.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/ExpenseTracker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhwZW5zZVRyYWNrZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/AddExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxBZGRFeHBlbnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/Analyse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxBbmFseXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/FintechApp/Create.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/FintechApp/Delete.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/FintechApp/Edit.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/Index.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/Privacy.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/_ViewImports.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/_ViewStart.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HW-front/HW/FintechWebApp/Pages/Shared/_Layout.cshtml]
+[D:/SPM-Apr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-0bc3dgr0wy

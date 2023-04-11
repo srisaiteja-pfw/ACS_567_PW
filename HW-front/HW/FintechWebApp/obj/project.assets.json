@@ -1141,11 +1141,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj",
-      "projectName": "FintechWebApp",
-      "projectPath": "D:\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj",
+      "projectUniqueName": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FinTechWebApp.csproj",
+      "projectName": "FinTechWebApp",
+      "projectPath": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FinTechWebApp.csproj",
       "packagesPath": "C:\\Users\\Furqan Khan\\.nuget\\packages\\",
-      "outputPath": "D:\\HW-front\\HW\\FintechWebApp\\obj\\",
+      "outputPath": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1166,8 +1166,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\HW-front\\HW\\HW\\HW\\HW.csproj": {
-              "projectPath": "D:\\HW-front\\HW\\HW\\HW\\HW.csproj"
+            "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj": {
+              "projectPath": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj"
             }
           }
         }

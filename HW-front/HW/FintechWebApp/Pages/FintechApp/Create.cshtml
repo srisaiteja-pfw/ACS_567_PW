@@ -13,7 +13,7 @@
 	<div>@Model.errorMessage</div>
 }
 
-<form method="POST">
+<form method="POST" onsubmit="handleSubmit(event) ">
 	<!-- Table to input account details -->
 	<table>
 		<tr>
@@ -63,4 +63,11 @@
 	}
 
 	<input type="submit" value="Add" class="btn btn-primary" />
+
+	<script>
+		function handleSubmit(event) {
+			alert("The account has been created");
+		}
+	</script>
+
 </form>

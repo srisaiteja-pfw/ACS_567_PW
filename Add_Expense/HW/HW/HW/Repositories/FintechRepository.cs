@@ -258,6 +258,30 @@ namespace HW.Repositories
 
         }
 
+        public bool TransferAmount(int A1, int A2, double Amount)
+        {
+            WithdrawAmount(A1, Amount);
+            DepositCheck(A2, Amount);
+
+            //var account1 = _context.Fintech.FirstOrDefault(a => a.Id == A1);
+            //var account2 = _context.Fintech.FirstOrDefault(b => b.Id == A2);
+            //if (account1 == null)
+            //{
+            //    if(account2 == null)
+            //    {
+            //        return false;
+            //    }
+            //    return false;
+            //}
+            //account1.Balance -= Amount;
+            //account2.Balance += Amount;
+            //_context.Update(account1);
+            //_context.Update(account2);
+
+            return Save();
+
+        }
+
         /// <summary>
         /// Save changes to database
         /// </summary>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YKFuw+QgR1IUl588e+2D8c/bW6FgShXg+ksD5uaUzU+2wCYf4RHpYaFz9vue3PJvfjjjcAkwWBhJPH9S6slO6w==",
+  "dgSpecHash": "AzYntyjA5hCCgpRLito0n7c11HX563kLHD7/p8uarr7DYf4ltQbYluUBfkPB8hV8L6fs5+7yHNaE+ywo4KJqCA==",
   "success": true,
-  "projectFilePath": "D:\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj",
+  "projectFilePath": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Furqan Khan\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Furqan Khan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

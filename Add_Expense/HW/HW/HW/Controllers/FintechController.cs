@@ -365,6 +365,32 @@ namespace FintechRestAPI.Controllers
             return result ? Ok("Check Successfully Deposited") : BadRequest("Check Deposit Failed");
         }
 
+        [HttpPut("TransferAmount")]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(404)]
+
+        public IActionResult TransferAmount(int A1, int A2, double Amount)
+        {
+            Fintech account = _fintech.GetItem(A1);
+            if (account == null)
+            {
+                return NotFound();
+            }
+
+            bool result1 = _fintech.WithdrawAmount(A1, Amount);
+            bool result2 = _fintech.DepositCheck(A2, Amount);
+            //bool result = _fintech.TransferAmount(A1, A2, Amount);  
+            if( result1 && result2 == true)
+            {
+                return Ok("Amount Successfully Transfered");
+            }
+            else
+            {
+                return BadRequest("transfer failed");
+            }
+            // result2? Ok("Amount Successfully Transfered") : BadRequest("Transfer Failed");
+        }
 
 
 
