@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj": {}
+    "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj": {}
   },
   "projects": {
-    "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj": {
+    "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj",
+        "projectUniqueName": "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj",
         "projectName": "FintechWebApp",
-        "projectPath": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj",
+        "projectPath": "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\FintechWebApp.csproj",
         "packagesPath": "C:\\Users\\Furqan Khan\\.nuget\\packages\\",
-        "outputPath": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\obj\\",
+        "outputPath": "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\FintechWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj": {
-                "projectPath": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj"
+              "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj": {
+                "projectPath": "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj"
               }
             }
           }
@@ -76,14 +76,14 @@
         }
       }
     },
-    "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj": {
+    "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj",
+        "projectUniqueName": "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj",
         "projectName": "HW",
-        "projectPath": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj",
+        "projectPath": "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\HW.csproj",
         "packagesPath": "C:\\Users\\Furqan Khan\\.nuget\\packages\\",
-        "outputPath": "D:\\SPM-Apr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\obj\\",
+        "outputPath": "D:\\SPM-MidApr\\ACS_567_PW_G8\\HW-front\\HW\\HW\\HW\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
