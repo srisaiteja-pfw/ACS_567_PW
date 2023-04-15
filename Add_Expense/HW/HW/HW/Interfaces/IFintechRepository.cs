@@ -121,6 +121,14 @@ namespace HW.Interfaces
         bool DepositCheck (int id, double Check_Amount);
 
         /// <summary>
+        /// A1 is account 1 from where amount is debited and account 2 is account where amount needs to be deposited
+        /// </summary>
+        /// <param name="A1"></param>
+        /// <param name="A2"></param>
+        /// <returns></returns>
+        bool TransferAmount(int A1, int A2, double Amount);
+
+        /// <summary>
         /// Save changes to databse
         /// </summary>
         /// <returns></returns>
