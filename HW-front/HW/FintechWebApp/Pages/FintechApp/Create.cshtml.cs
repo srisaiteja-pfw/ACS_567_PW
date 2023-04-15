@@ -29,7 +29,6 @@ namespace FintechWebApp.Pages.FintechApp
             public async void OnPost()
             {
                 //The values from the form are set to the fintech object
-                fintech.Id = int.Parse(Request.Form["id"]);
                 fintech.Firstname = Request.Form["firstname"];
                 fintech.Lastname = Request.Form["lastname"];
                 fintech.Address = Request.Form["address"];
