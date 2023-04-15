@@ -29,7 +29,6 @@ namespace FintechWebApp.Pages.FintechApp
         public async void OnPost()
         {
             //The values from the form are set to the fintech object
-            monthly_expenses.Id = int.Parse(Request.Form["id"]);
             monthly_expenses.Account_number = int.Parse(Request.Form["accountnumber"]);
             monthly_expenses.Date = Request.Form["date"];
             monthly_expenses.Category = Request.Form["category"];
@@ -50,7 +49,7 @@ namespace FintechWebApp.Pages.FintechApp
 
                     var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-                    var result = await client.PostAsync("FinTechModel", content);
+                    var result = await client.PostAsync("Fintech/AddExpense", content);
                     string resultContent = await result.Content.ReadAsStringAsync();
                     Console.WriteLine(resultContent);
                     // If the server returns an error, an error message is displayed
