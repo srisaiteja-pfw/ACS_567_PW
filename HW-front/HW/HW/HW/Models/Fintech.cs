@@ -39,7 +39,7 @@ namespace HW.Models
         public string Category { get; set; }
         public int Expense { get; set; }
 
-        public FinTechModel(int account_number = 10001, string date = "", string category = "", int expense = 0)
+        public FinTechModel(int account_number = 10001, string date = "", string category = "", int expense =0)
         {
             Account_number = account_number;
             Date = date;
