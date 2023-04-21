@@ -246,7 +246,7 @@ namespace HW.Repositories
                             .Select(num => num.Expense)
                             .ToList();
             Dictionary<string, dynamic> analysis = new();
-            analysis.Add("Amount ", numbers.Max());
+            analysis.Add("Max Amount ", numbers.Max());
             return analysis;
         }
 
@@ -270,7 +270,7 @@ namespace HW.Repositories
                             .Select(num => num.Expense)
                             .ToList();
             Dictionary<string, dynamic> analysis = new();
-            analysis.Add("Amount Spent ", numbers.Min());
+            analysis.Add("Min Amount Spent ", numbers.Min());
             return analysis;
         }
 

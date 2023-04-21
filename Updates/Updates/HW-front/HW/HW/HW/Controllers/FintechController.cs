@@ -357,15 +357,15 @@ namespace FintechRestAPI.Controllers
 		}
 
 
-        [HttpGet("Fintech/Median")]
+        [HttpGet("Median")]
         [ProducesResponseType(200)]
         public IActionResult Median()
         {
-            _logger.Log(LogLevel.Information, "Calculating median");
+            _logger.Log(LogLevel.Information, "Get Median");
             return Ok(_fintech.CalculateMedian());
         }
 
-        [HttpGet("Fintech/MostAmountSpentOn")]
+        [HttpGet("MostAmountSpent")]
         [ProducesResponseType(200)]
         public IActionResult MostAmountSpentOn()
         {
@@ -373,7 +373,7 @@ namespace FintechRestAPI.Controllers
             return Ok(_fintech.CalculateMostAmountSpentOn());
         }
 
-        [HttpGet("Fintech/Amount")]
+        [HttpGet("MaxAmount")]
         [ProducesResponseType(200)]
         public IActionResult Amount()
         {
@@ -381,7 +381,7 @@ namespace FintechRestAPI.Controllers
             return Ok(_fintech.CalculateAmount());
         }
 
-        [HttpGet("Fintech/LeastAmountSpentOn")]
+        [HttpGet("LeastAmountSpent")]
         [ProducesResponseType(200)]
         public IActionResult LeastAmountSpentOn()
         {
@@ -389,7 +389,7 @@ namespace FintechRestAPI.Controllers
             return Ok(_fintech.CalculateLeastAmountSpentOn());
         }
 
-        [HttpGet("Fintech/AmountSpent")]
+        [HttpGet("MinAmount")]
         [ProducesResponseType(200)]
         public IActionResult AmountSpent()
         {

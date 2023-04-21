@@ -28,7 +28,7 @@ namespace FintechWebApp.Pages.FintechApp
   //          using (var client = new HttpClient())
   //          {
   //              client.BaseAddress = new Uri("http://localhost:5264");
-  //              var response = await client.GetAsync("/Fintech/Mean");
+  //              var response = await client.GetAsync("/Fintech/Analyse");
   //              var json = await response.Content.ReadAsStringAsync();
   //              dictionary = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(json);
   //              return Page();
