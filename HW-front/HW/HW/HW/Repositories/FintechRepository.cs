@@ -222,12 +222,69 @@ namespace HW.Repositories
 
             return analysis;
         }
-
         /// <summary>
-        /// Save changes to database
+        /// Creating an API to withdraw money
         /// </summary>
-        /// <returns>Store in database</returns>
-        public bool Save()
+        /// <param name="id"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+		public bool WithdrawAmount(int id, double amount)
+		{
+			var account = _context.Fintech.FirstOrDefault(a => a.Id == id);
+			if (account == null)
+			{
+				return false;
+			}
+
+			if (account.Balance < amount)
+			{
+				return false;
+			}
+
+			account.Balance -= amount;
+			_context.Update(account);
+			return Save();
+		}
+        /// <summary>
+        /// Method to deposit a check in an account
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="Check_Amount"></param>
+        /// <returns></returns>
+		public bool DepositCheck(int id, double Check_Amount)
+		{
+			var account = _context.Fintech.FirstOrDefault(a => a.Id == id);
+			if (account == null)
+			{
+				return false;
+			}
+			account.Balance += Check_Amount;
+			_context.Update(account);
+			return Save();
+
+		}
+		/// <summary>
+        /// Method to allow transfer of funds between accounts.
+        /// </summary>
+        /// <param name="A1"></param>
+        /// <param name="A2"></param>
+        /// <param name="Amount"></param>
+        /// <returns></returns>
+        public bool TransferAmount(int A1, int A2, double Amount)
+		{
+			WithdrawAmount(A1, Amount);
+			DepositCheck(A2, Amount);
+
+			return Save();
+
+		}
+
+
+		/// <summary>
+		/// Save changes to database
+		/// </summary>
+		/// <returns>Store in database</returns>
+		public bool Save()
         {
             int saved = _context.SaveChanges();
             return saved == 1;

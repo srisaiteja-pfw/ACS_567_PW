@@ -41,12 +41,12 @@ namespace FintechWebApp.Pages.FintechApp
                 }
             }
         }
-        /// <summary>
-        /// In the OnPost method, the code updates the properties of the 
-        /// Fintech object using values from the request form data. 
-        /// </summary>
-        public async void OnPost()
-        {
+		/// <summary>
+		/// In the OnPost method, the code updates the properties of the 
+		/// Fintech object using values from the request form data. 
+		/// </summary>
+		public async Task<IActionResult> OnPostAsync()
+		{
             fintech.Id = int.Parse(Request.Form["id"]);
             fintech.Firstname = Request.Form["firstname"];
             fintech.Lastname = Request.Form["lastname"];
@@ -88,6 +88,7 @@ namespace FintechWebApp.Pages.FintechApp
                 }
 
             }
-        }
+			return RedirectToPage("/Index");
+		}
     }
 }

@@ -325,7 +325,7 @@ namespace FintechRestAPI.Controllers
         /// </summary>
         /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
 
-        [HttpDelete("DeleteExpense")]
+        [HttpDelete("DeleteExpense/{id}")]
         public IActionResult DeleteExpense(int id)
         {
             bool result = _fintech.DeleteExpense(id);
@@ -348,8 +348,69 @@ namespace FintechRestAPI.Controllers
             return Ok(_fintech.DataAnalysis());
         }
 
+		[HttpPut("WithdrawAmount/{id}")]
+		[ProducesResponseType(400)]
+		[ProducesResponseType(200)]
+		[ProducesResponseType(404)]
 
-    }
+		public IActionResult WithdrawAmount(int id, double amount)
+		{
+			Fintech account = _fintech.GetItem(id);
+			if (account == null)
+			{
+				return NotFound();
+			}
+
+			bool result = _fintech.WithdrawAmount(id, amount);
+			return result ? Ok("Amount has been withdrawn") : BadRequest("Insufficient Funds");
+		}
+
+		[HttpPut("DepositChecks/{id}/{Check_Amount}")]
+		[ProducesResponseType(400)]
+		[ProducesResponseType(200)]
+		[ProducesResponseType(404)]
+
+		public IActionResult DepositCheck(int id, double Check_Amount)
+		{
+			Fintech account = _fintech.GetItem(id);
+			if (account == null)
+			{
+				return NotFound();
+			}
+
+			bool result = _fintech.DepositCheck(id, Check_Amount);
+			return result ? Ok("Check Successfully Deposited") : BadRequest("Check Deposit Failed");
+		}
+
+		[HttpPut("TransferAmount")]
+		[ProducesResponseType(400)]
+		[ProducesResponseType(200)]
+		[ProducesResponseType(404)]
+
+		public IActionResult TransferAmount(int A1, int A2, double Amount)
+		{
+			Fintech account = _fintech.GetItem(A1);
+			if (account == null)
+			{
+				return NotFound();
+			}
+
+			bool result1 = _fintech.WithdrawAmount(A1, Amount);
+			bool result2 = _fintech.DepositCheck(A2, Amount);
+			//bool result = _fintech.TransferAmount(A1, A2, Amount);  
+			if (result1 && result2 == true)
+			{
+				return Ok("Amount Successfully Transfered");
+			}
+			else
+			{
+				return BadRequest("transfer failed");
+			}
+			// result2? Ok("Amount Successfully Transfered") : BadRequest("Transfer Failed");
+		}
+
+
+	}
 
 
 

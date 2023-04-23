@@ -21,12 +21,13 @@ namespace FintechWebApp.Pages.FintechApp
         public string errorMessage = "";
         public string successMessage = "";
 
-        /// <summary>
-        /// 
-        ///  The OnPost method is defined as an async void method
-        /// </summary>
+		/// <summary>
+		/// 
+		///  The OnPost method is defined as an async void method
+		/// </summary>
 
-        public async void OnPost()
+		public async Task<IActionResult> OnPostAsync()
+
         {
             //The values from the form are set to the fintech object
             monthly_expenses.Account_number = int.Parse(Request.Form["accountnumber"]);
@@ -65,7 +66,8 @@ namespace FintechWebApp.Pages.FintechApp
 
                 }
             }
-        }
+			return RedirectToPage("/Pages/ExpenseTracker");
+		}
     }
 }
 

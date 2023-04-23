@@ -45,11 +45,11 @@ namespace FintechWebApp.Pages.FintechApp
 
             }
         }
-        /// <summary>
-        /// The OnPost method is called when the user submits the form to delete the Fintech account object.
-        /// </summary>
-        public async void OnPost()
-        {
+		/// <summary>
+		/// The OnPost method is called when the user submits the form to delete the Fintech account object.
+		/// </summary>
+		public async Task<IActionResult> OnPostAsync()
+		{
             bool isDeleted = false;
             int id = int.Parse(Request.Form["id"]);
             using (var client = new HttpClient())
@@ -61,17 +61,19 @@ namespace FintechWebApp.Pages.FintechApp
                 if (response.IsSuccessStatusCode)
                 {
                     isDeleted = true;
+
                 }
             }
             if (isDeleted)
             {
                 successMessage = "Successfully deleted";
-            }
+				Console.WriteLine("successMessage: " + successMessage);
+			}
             else
             {
                 errorMessage = "Error deleting";
             }
-
-        }
+		return RedirectToPage("/Index");
+		}
     }
 }

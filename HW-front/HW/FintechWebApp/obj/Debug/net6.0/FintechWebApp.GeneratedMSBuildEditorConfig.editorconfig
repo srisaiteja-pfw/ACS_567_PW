@@ -36,6 +36,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxBbmFseXNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SPM-MidApr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/CheckDeposit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxDaGVja0RlcG9zaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SPM-MidApr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,8 +48,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/SPM-MidApr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/DeleteExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxEZWxldGVFeHBlbnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SPM-MidApr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SPM-MidApr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/Mean.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxNZWFuLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SPM-MidApr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/MinAmount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxNaW5BbW91bnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SPM-MidApr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/TransferFunds.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxUcmFuc2ZlckZ1bmRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SPM-MidApr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/FintechApp/WithdrawMoney.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmludGVjaEFwcFxXaXRoZHJhd01vbmV5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SPM-MidApr/ACS_567_PW_G8/HW-front/HW/FintechWebApp/Pages/Index.cshtml]

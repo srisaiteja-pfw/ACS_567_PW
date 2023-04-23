@@ -45,25 +45,23 @@
 			<td><input type="text" name="ssn" value="@Model.fintech.SSN"></td>
 		</tr>
 		<tr>
-			<td>Balance</td>
+			<td>Balance (in $)</td>
 			<td><input type="text" name="balance" value="@Model.fintech.Balance"></td>
 		</tr>
 		
 	</table>
 	<p></p>
 
-	@if (@Model.successMessage.Length > 0)
+	@if (Model.successMessage.Length > 0)
 	{
-		<!-- Display success message if there is any -->
-		<div>@Model.successMessage</div>
+		<div name="successMessage">@Model.successMessage</div>
 	}
-
 	<input type="submit" value="Add" class="btn btn-primary" />
-
-	<script>
-		function handleSubmit(event) {
-			alert("The account has been created");
-		}
-	</script>
-
 </form>
+@if (!string.IsNullOrEmpty(Model.successMessage))
+{
+	<div class="alert alert-success" role="alert">
+		@Model.successMessage
+	</div>
+}
+</div>

@@ -26,7 +26,7 @@ namespace FintechWebApp.Pages.FintechApp
             ///  The OnPost method is defined as an async void method
             /// </summary>
 
-            public async void OnPost()
+             public async Task<IActionResult> OnPostAsync()
             {
                 //The values from the form are set to the fintech object
                 fintech.Firstname = Request.Form["firstname"];
@@ -70,7 +70,8 @@ namespace FintechWebApp.Pages.FintechApp
 
                     }
                 }
-            }
+                return RedirectToPage("/Index");
+		}
         }
 }
 
