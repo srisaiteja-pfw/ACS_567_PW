@@ -82,7 +82,7 @@ namespace FintechWebApp.Pages.FintechApp
 				}
 
 			}
-			return Page();
+			return RedirectToPage("/Index");
 		}
 	}
 }
