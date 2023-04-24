@@ -307,24 +307,35 @@ namespace FintechRestAPI.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(200)]
 
-        public IActionResult EditExpense([FromBody] FinTechModel updated)
+        public IActionResult EditExpense([FromBody] FinTechModel expense)
         {
-            if (updated == null)
+            if (expense == null)
             {
                 return BadRequest("Expense is null");
             }
-            bool result = _fintech.EditExpense(updated);
+			FinTechModel result = _fintech.GetExpense(expense.Id);
+			if (expense == null)
+			{
+				return BadRequest("Expense not found");
+			}
+			result.Account_number = expense.Account_number;
+            result.Category = expense.Category;
+            result.Date = expense.Date;
+            result.Expense = expense.Expense;
+		
 
-            return result ? Ok("Expense has been updated") : BadRequest();
-        }
+			bool isUpdated = _fintech.EditExpense(result);
+			return isUpdated ? Ok("Expense has been updated") : BadRequest();
+		}
 
+	
 
-        /// <summary>
-        /// Action for deleting Item
-        /// </summary>
-        /// <returns>action will return a 200 Ok status code when it runs successfully</returns>
+		/// <summary>
+		/// Action for deleting Item
+		/// </summary>
+		/// <returns>action will return a 200 Ok status code when it runs successfully</returns>
 
-        [HttpDelete("DeleteExpense/{id}")]
+		[HttpDelete("DeleteExpense/{id}")]
         public IActionResult DeleteExpense(int id)
         {
             bool result = _fintech.DeleteExpense(id);

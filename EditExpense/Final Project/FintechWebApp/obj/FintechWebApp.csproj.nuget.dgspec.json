@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\FintechWebApp\\FintechWebApp.csproj": {}
+    "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\FintechWebApp\\FintechWebApp.csproj": {}
   },
   "projects": {
-    "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\FintechWebApp\\FintechWebApp.csproj": {
+    "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\FintechWebApp\\FintechWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\FintechWebApp\\FintechWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\FintechWebApp\\FintechWebApp.csproj",
         "projectName": "FintechWebApp",
-        "projectPath": "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\FintechWebApp\\FintechWebApp.csproj",
-        "packagesPath": "C:\\Users\\Furqan Khan\\.nuget\\packages\\",
-        "outputPath": "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\FintechWebApp\\obj\\",
+        "projectPath": "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\FintechWebApp\\FintechWebApp.csproj",
+        "packagesPath": "C:\\Users\\Vruddhi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\FintechWebApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Furqan Khan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Vruddhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj": {
-                "projectPath": "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj"
+              "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj": {
+                "projectPath": "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj"
               }
             }
           }
@@ -72,25 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj": {
+    "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj",
+        "projectUniqueName": "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj",
         "projectName": "HW",
-        "projectPath": "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj",
-        "packagesPath": "C:\\Users\\Furqan Khan\\.nuget\\packages\\",
-        "outputPath": "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\obj\\",
+        "projectPath": "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj",
+        "packagesPath": "C:\\Users\\Vruddhi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Vruddhi\\OneDrive\\Desktop\\finalll\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Furqan Khan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Vruddhi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -168,7 +160,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

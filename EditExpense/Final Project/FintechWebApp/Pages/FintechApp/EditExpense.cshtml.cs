@@ -20,36 +20,38 @@ namespace FintechWebApp.Pages.FintechApp
 
 		public async void OnGet()
 		{
+			// line retrieves the month parameter from the query string of the request.
 			string id = Request.Query["id"];
 			using (var client = new HttpClient())
 			{
+				//These lines create an instance of HttpClient, set the base address
 				client.BaseAddress = new Uri("http://localhost:5264");
-
-				// HTTP GET
-				var responseTask = client.GetAsync("/Fintech/EditExpense" + id);
+				//HTTP GET
+				var responseTask = client.DeleteAsync("/Fintech/EditExpense/" + id);
 				responseTask.Wait();
 
-				var result = responseTask.Result;
-				if (result.IsSuccessStatusCode)
+				//If the response was successful, it sets the Month property of the bill object to the month parameter. 
+				if (responseTask.Result.IsSuccessStatusCode)
 				{
-					var readTask = await result.Content.ReadAsStringAsync();
-					monthly_expenses = JsonConvert.DeserializeObject<FinTechModel>(readTask);
+					monthly_expenses.Id = int.Parse(id);
+
 				}
+
 			}
 		}
 		/// <summary>
 		/// In the OnPost method, the code updates the properties of the 
 		/// Fintech object using values from the request form data. 
 		/// </summary>
-		public async Task<IActionResult> OnPostAsync()
-		{
 
+		public async Task<IActionResult> OnPostAsync()
+
+		{
 			//The values from the form are set to the fintech object
 			monthly_expenses.Account_number = int.Parse(Request.Form["accountnumber"]);
 			monthly_expenses.Date = Request.Form["date"];
 			monthly_expenses.Category = Request.Form["category"];
 			monthly_expenses.Expense = int.Parse(Request.Form["expense"]);
-
 
 			if (monthly_expenses.Expense == 0)
 			{
@@ -66,21 +68,21 @@ namespace FintechWebApp.Pages.FintechApp
 
 					var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-					var result = await client.PutAsync("/Fintech/EditExpense", content);
+					var result = await client.PostAsync("Fintech/EditExpense", content);
 					string resultContent = await result.Content.ReadAsStringAsync();
 					Console.WriteLine(resultContent);
-
+					// If the server returns an error, an error message is displayed
 					if (!result.IsSuccessStatusCode)
 					{
-						errorMessage = "Error editing";
+						errorMessage = "Error updating";
 					}
 					else
 					{
-						successMessage = "Successfully editing";
+						// If the server returns a success message, a success message is displayed
+						successMessage = "Successfully updated";
 					}
 
 				}
-
 			}
 			return RedirectToPage("/Pages/ExpenseTracker");
 		}
