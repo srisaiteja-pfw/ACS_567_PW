@@ -27,7 +27,7 @@ namespace FintechWebApp.Pages.FintechApp
 				//These lines create an instance of HttpClient, set the base address
 				client.BaseAddress = new Uri("http://localhost:5264");
 				//HTTP GET
-				var responseTask = client.DeleteAsync("/Fintech/EditExpense/" + id);
+				var responseTask = client.GetAsync("/Fintech/EditExpense/" + id);
 				responseTask.Wait();
 
 				//If the response was successful, it sets the Month property of the bill object to the month parameter. 
@@ -68,7 +68,7 @@ namespace FintechWebApp.Pages.FintechApp
 
 					var content = new StringContent(json, System.Text.Encoding.UTF8, "application/json");
 
-					var result = await client.PostAsync("Fintech/EditExpense", content);
+					var result = await client.PutAsync("Fintech/EditExpense", content);
 					string resultContent = await result.Content.ReadAsStringAsync();
 					Console.WriteLine(resultContent);
 					// If the server returns an error, an error message is displayed
