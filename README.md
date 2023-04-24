@@ -1,4 +1,4 @@
 # ACS_567_PW_G8
 ACS PROJECT WORK
-
-We have created the PPT explaining our project
+ONE TRACK APP FOLDER has the final Implementation.
+Open Folder -> Final Project -> HW -> Hw.
