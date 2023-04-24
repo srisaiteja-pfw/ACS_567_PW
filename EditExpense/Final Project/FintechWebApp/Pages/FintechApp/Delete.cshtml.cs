@@ -73,7 +73,7 @@ namespace FintechWebApp.Pages.FintechApp
             {
                 errorMessage = "Error deleting";
             }
-		return RedirectToPage("/Index");
+		return RedirectToPage("/MainPage");
 		}
     }
 }

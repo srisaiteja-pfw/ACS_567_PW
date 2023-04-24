@@ -37,9 +37,10 @@ namespace FintechWebApp.Pages.FintechApp
                 fintech.Age = int.Parse(Request.Form["age"]);
                 fintech.SSN = Request.Form["ssn"];
                 fintech.Balance = double.Parse(Request.Form["balance"]);
+			    fintech.Joiningmonth = int.Parse(Request.Form["joiningmonth"]);
 
 
-            if (fintech.Firstname.Length == 0)
+			if (fintech.Firstname.Length == 0 )
                 {
                     errorMessage = "Firstname is required";
                 }
@@ -70,7 +71,7 @@ namespace FintechWebApp.Pages.FintechApp
 
                     }
                 }
-                return RedirectToPage("/Index");
+                return RedirectToPage("/MainPage");
 		}
         }
 }

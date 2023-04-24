@@ -28,8 +28,10 @@ namespace HW.Models
 
         public double Balance { get; set; }
 
+		public int Joiningmonth { get; set; }
 
-    }
+
+	}
     public class FinTechModel
 
     {

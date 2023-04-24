@@ -1,5 +1,5 @@
 ﻿@page
-@model FintechWebApp.Pages.FintechApp.IndexModel
+@model FintechWebApp.Pages.FintechApp.AnalysisModel
 @{
     var keyframes = @"
         @keyframes my-animation {
@@ -13,8 +13,6 @@
 <head>
     <title>My Page</title>
     <style>
-       
-
         .card {
             position: relative;
             background-color: white;
@@ -66,17 +64,14 @@
 </head>
 <body style="background-color:lightblue; color:black">
     <br>
-    <div class="card-container">
         <div class="card">
-            <h2>OneTrack Accounts</h2>
-            <a class='btn btn-primary btn-sm' href='/MainPage'> Go </a>
-        </div>
+            <h2>Predicted Accounts:</h2>
+            <h1>@Model.dictionary?["Predicted Accounts"]</h1>
 
-        <div class="card">
-            <h2>OneTrack Expense Tracker</h2>
-             <a class='btn btn-primary btn-sm' href='/ExpenseTracker'> Go </a>
         </div>
+        
     </div>
 </body>
 
 </html>
+

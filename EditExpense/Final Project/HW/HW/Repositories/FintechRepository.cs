@@ -279,6 +279,43 @@ namespace HW.Repositories
 
 		}
 
+		public Dictionary<string, dynamic> PredictiveAnalysis()
+		{
+
+			List<Fintech> data = _context.Fintech.ToList();
+			List<int> joiningMonths = data
+							.Select(num => num.Joiningmonth)
+							.ToList();
+
+			// Group the data by joining month and count the number of records in each group
+			var groupedData = joiningMonths
+				.GroupBy(m => m)
+				.OrderBy(g => g.Key)
+				.ToList();
+
+			var growthRates = new List<double>();
+			for (int i = 1; i < groupedData.Count; i++)
+			{
+				double growthRate = (double)(groupedData[i].Count() - groupedData[i - 1].Count()) / (double)groupedData[i - 1].Count();
+				growthRates.Add(growthRate);
+			}
+
+			// Calculate the average monthly growth rate
+
+			double avgGrowthRate = growthRates.Average();
+
+			// Predict the number of new accounts for next month
+			int predictedAccounts = (int)Math.Round(groupedData.Last().Count() * (1 + avgGrowthRate));
+
+			// Build the prediction result dictionary
+			var predict = new Dictionary<string, dynamic>();
+			predict.Add("Predicted Accounts", predictedAccounts);
+
+			return predict;
+
+
+		}
+
 
 		/// <summary>
 		/// Save changes to database

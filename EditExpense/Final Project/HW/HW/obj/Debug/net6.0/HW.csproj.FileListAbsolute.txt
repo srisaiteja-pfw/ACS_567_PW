@@ -294,3 +294,46 @@ D:\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\refin
 D:\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.pdb
 D:\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.genruntimeconfig.cache
 D:\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\ref\HW.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\appsettings.json
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\HW.exe
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\HW.deps.json
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\HW.runtimeconfig.json
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\HW.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\HW.pdb
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.csproj.AssemblyReference.cache
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.AssemblyInfoInputs.cache
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.AssemblyInfo.cs
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.csproj.CoreCompileInputs.cache
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\staticwebassets\msbuild.HW.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\staticwebassets\msbuild.build.HW.props
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.HW.props
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.HW.props
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\scopedcss\bundle\HW.styles.css
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.csproj.CopyComplete
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\refint\HW.dll
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.pdb
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\HW.genruntimeconfig.cache
+C:\Users\Furqan Khan\OneDrive\Desktop\FINALSPM\ACS_567_PW_G8\EditExpense\Final Project\HW\HW\obj\Debug\net6.0\ref\HW.dll

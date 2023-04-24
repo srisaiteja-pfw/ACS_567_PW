@@ -66,7 +66,7 @@ namespace FintechWebApp.Pages.FintechApp
 
                 }
             }
-			return RedirectToPage("/Pages/ExpenseTracker");
+			return RedirectToPage("/ExpenseTracker");
 		}
     }
 }

@@ -408,6 +408,14 @@ namespace FintechRestAPI.Controllers
 			// result2? Ok("Amount Successfully Transfered") : BadRequest("Transfer Failed");
 		}
 
+		[HttpGet("Analysis")]
+		[ProducesResponseType(200)]
+		public IActionResult PredictiveAnalysis()
+		{
+			_logger.Log(LogLevel.Information, "Predictive analysis");
+			return Ok(_fintech.PredictiveAnalysis());
+		}
+
 
 	}
 

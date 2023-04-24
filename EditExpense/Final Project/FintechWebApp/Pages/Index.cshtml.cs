@@ -15,21 +15,6 @@ namespace FintechWebApp.Pages.FintechApp
         /// from the API using HTTP GET request
         /// </summary>
         public async void OnGet()
-        {
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri("http://localhost:5264");
-                //HTTP GET
-                var responseTask = client.GetAsync("/Fintech");
-                responseTask.Wait();
-
-                var result = responseTask.Result;
-                if (result.IsSuccessStatusCode)
-                {
-                    var readTask = await result.Content.ReadAsStringAsync();
-                    fintech = JsonConvert.DeserializeObject<List<Fintech>>(readTask);
-                }
-            }
-        }
+        { }
     }
 }

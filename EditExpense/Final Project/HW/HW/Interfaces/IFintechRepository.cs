@@ -64,6 +64,9 @@ namespace HW.Interfaces
 		/// Save changes to databse
 		/// </summary>
 		/// <returns></returns>
+		/// 
+		
+		Dictionary<string, dynamic> PredictiveAnalysis();
 		bool Save();
     }
 }

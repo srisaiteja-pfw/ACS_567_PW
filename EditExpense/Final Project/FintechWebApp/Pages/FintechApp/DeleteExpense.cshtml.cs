@@ -24,27 +24,26 @@ namespace FintechWebApp.Pages.FintechApp
 		/// <summary>
 		/// This method is called when the page is loaded with an HTTP GET request. 
 		/// </summary>
-		public async void OnGet()
+		public async Task<IActionResult> OnGetAsync()
 		{
-			// line retrieves the month parameter from the query string of the request.
 			string id = Request.Query["id"];
+
 			using (var client = new HttpClient())
 			{
-				//These lines create an instance of HttpClient, set the base address
 				client.BaseAddress = new Uri("http://localhost:5264");
-				//HTTP GET
 				var responseTask = client.DeleteAsync("/Fintech/DeleteExpense/" + id);
 				responseTask.Wait();
 
-				//If the response was successful, it sets the Month property of the bill object to the month parameter. 
 				if (responseTask.Result.IsSuccessStatusCode)
 				{
 					monthly_expenses.Id = int.Parse(id);
-
 				}
-
 			}
+
+			// Redirect to the homepage
+			return RedirectToPage("/ExpenseTracker");
 		}
+
 	}
 }
 

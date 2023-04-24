@@ -1223,11 +1223,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj",
+      "projectUniqueName": "C:\\Users\\Furqan Khan\\OneDrive\\Desktop\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj",
       "projectName": "HW",
-      "projectPath": "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj",
+      "projectPath": "C:\\Users\\Furqan Khan\\OneDrive\\Desktop\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\HW.csproj",
       "packagesPath": "C:\\Users\\Furqan Khan\\.nuget\\packages\\",
-      "outputPath": "D:\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\obj\\",
+      "outputPath": "C:\\Users\\Furqan Khan\\OneDrive\\Desktop\\FINALSPM\\ACS_567_PW_G8\\EditExpense\\Final Project\\HW\\HW\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
