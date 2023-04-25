@@ -6,10 +6,10 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace FintechWebApp.Pages.FintechApp
 {
-    public class AnalyseModel : PageModel
+	public class AnalyseModel : PageModel
 	{
 		/// <summary>
-		/// It declares a public DataAnalysis object named fini.
+		/// It declares a public FinTechModel object named fini.
 		/// </summary>
 		public FinTechModel fini = new();
 		/// <summary>
@@ -22,21 +22,22 @@ namespace FintechWebApp.Pages.FintechApp
 		/// </summary>
 		public async Task OnGet()
 		{
-
 			using (var client = new HttpClient())
 			{
-                client.BaseAddress = new Uri("http://localhost:5264");
-                // creates a new HttpClient GET request to the "Bills/Analyse" API endpoint.
-                //HTTP GET
-                var responseTask = client.GetAsync("/Fintech/Analyse");
+				// Sets the base address for HTTP requests.
+				client.BaseAddress = new Uri("http://localhost:5264");
+
+				// Creates a new HttpClient GET request to the "Fintech/Analyse" API endpoint.
+				var responseTask = client.GetAsync("/Fintech/Analyse");
 				responseTask.Wait();
 
+				// Reads the response content as a string.
 				var readTask = await responseTask.Result.Content.ReadAsStringAsync();
-				//The dictionary object is then used in the Razor Page to display the analysis data.
+
+				// The dictionary object is then used in the Razor Page to display the analysis data.
 				dictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(readTask);
-
-
 			}
 		}
 	}
+
 }

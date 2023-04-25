@@ -19,61 +19,78 @@ namespace FintechWebApp.Pages.FintechApp
         public string errorMessage = "";
         public string successMessage = "";
 
-        /// <summary>
-        /// The OnGet method is called when the page is loaded and 
-        /// uses the Request.Query property to get the ID of the Fintech Account object to delete.
-        /// </summary>
-        public async void OnGet()
-        {
-            string id = Request.Query["id"];
+		/// <summary>
+		/// The OnGet method is called when the page is loaded and 
+		/// uses the Request.Query property to get the ID of the Fintech Account object to delete.
+		/// </summary>
+		public async void OnGet()
+		{
+			// Retrieve the id parameter from the query string
+			string id = Request.Query["id"];
 
+			// Create a new HttpClient instance
+			using (var client = new HttpClient())
+			{
+				// Set the base address of the API
+				client.BaseAddress = new Uri("http://localhost:5264");
 
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri("http://localhost:5264");
+				// Send an HTTP GET request to the API with the specified id
+				var responseTask = client.GetAsync("/Fintech/" + id);
 
-                // HTTP GET
-                var responseTask = client.GetAsync("/Fintech/" + id);
-                responseTask.Wait();
+				// Wait for the response to be returned
+				responseTask.Wait();
 
-                var result = responseTask.Result;
-                if (result.IsSuccessStatusCode)
-                {
-                    var readTask = await result.Content.ReadAsStringAsync();
-                    fintech = JsonConvert.DeserializeObject<Fintech>(readTask);
-                }
+				// Get the response object
+				var result = responseTask.Result;
 
-            }
-        }
+				// If the response is successful, deserialize the JSON content into a Fintech object
+				if (result.IsSuccessStatusCode)
+				{
+					var readTask = await result.Content.ReadAsStringAsync();
+					fintech = JsonConvert.DeserializeObject<Fintech>(readTask);
+				}
+			}
+		}
+
 		/// <summary>
 		/// The OnPost method is called when the user submits the form to delete the Fintech account object.
 		/// </summary>
 		public async Task<IActionResult> OnPostAsync()
 		{
-            bool isDeleted = false;
-            int id = int.Parse(Request.Form["id"]);
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri("http://localhost:5264");
+			// Initialize variables
+			bool isDeleted = false;
+			int id = int.Parse(Request.Form["id"]);
 
-                var response = await client.DeleteAsync("/Fintech/" + id);
+			// Create a new HttpClient instance
+			using (var client = new HttpClient())
+			{
+				// Set the base address of the API
+				client.BaseAddress = new Uri("http://localhost:5264");
 
-                if (response.IsSuccessStatusCode)
-                {
-                    isDeleted = true;
+				// Send an HTTP DELETE request to the API with the specified id
+				var response = await client.DeleteAsync("/Fintech/" + id);
 
-                }
-            }
-            if (isDeleted)
-            {
-                successMessage = "Successfully deleted";
+				// If the response is successful, set the isDeleted variable to true
+				if (response.IsSuccessStatusCode)
+				{
+					isDeleted = true;
+				}
+			}
+
+			// If the account was deleted successfully, set the success message and write it to the console. Otherwise, set the error message.
+			if (isDeleted)
+			{
+				successMessage = "Successfully deleted";
 				Console.WriteLine("successMessage: " + successMessage);
 			}
-            else
-            {
-                errorMessage = "Error deleting";
-            }
-		return RedirectToPage("/Index");
+			else
+			{
+				errorMessage = "Error deleting";
+			}
+
+			// Redirect the user to the Index page
+			return RedirectToPage("/Index");
 		}
-    }
+
+	}
 }

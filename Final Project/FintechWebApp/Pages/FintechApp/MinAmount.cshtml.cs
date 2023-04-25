@@ -18,7 +18,6 @@ namespace FintechWebApp.Pages.FintechApp
 		/// </summary>
 		public async Task OnGet()
 		{
-
 			using (var client = new HttpClient())
 			{
 				client.BaseAddress = new Uri("http://localhost:5264");
@@ -30,9 +29,8 @@ namespace FintechWebApp.Pages.FintechApp
 				var readTask = await responseTask.Result.Content.ReadAsStringAsync();
 				//The dictionary object is then used in the Razor Page to display the analysis data.
 				dictionary = JsonConvert.DeserializeObject<Dictionary<string, string>>(readTask);
-
-
 			}
 		}
 	}
+
 }

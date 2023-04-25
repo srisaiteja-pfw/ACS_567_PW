@@ -58,32 +58,36 @@ namespace FintechWebApp.Pages.FintechApp
 			}
 			else
 			{
+				// retrieve the amount of the check from the HTTP POST request
 				double checkAmount = double.Parse(Request.Form["balance"]);
 
 				using (var client = new HttpClient())
 				{
+					// set the base address for the HTTP client
 					client.BaseAddress = new Uri("http://localhost:5264");
 
-					var requestContent = new StringContent(JsonConvert.SerializeObject(checkAmount), Encoding.UTF8, "application/json");
-
-					var result = await client.PutAsync("/Fintech/DepositChecks/"+fintech.Id+"/"+checkAmount, requestContent);
+					// create a new HTTP PUT request to the "Fintech/DepositChecks" API endpoint with the account id and check amount in the URL
+					var result = await client.PutAsync("/Fintech/DepositChecks/" + fintech.Id + "/" + checkAmount, new StringContent("", Encoding.UTF8, "application/json"));
 					string resultContent = await result.Content.ReadAsStringAsync();
 
-
+					// check the response status code for success or failure
 					if (!result.IsSuccessStatusCode)
 					{
 						errorMessage = "Error in Check deposit";
 					}
 					else
 					{
+						// update the success message and add the amount to the account balance
 						successMessage = "Successfully Deposited";
 						fintech.Balance += checkAmount;
 					}
 				}
-
 			}
+
+			// redirect to the index page
 			return RedirectToPage("/Index");
 		}
+
 	}
 }
 

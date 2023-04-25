@@ -15,9 +15,11 @@ namespace FintechWebApp.Pages.FintechApp
 	public class DeleteExpenseModel : PageModel
 	{
 		/// <summary>
-		///  A public Fintech object is created
+		/// A public Fintech object is created to represent the monthly expenses.
 		/// </summary>
 		public FinTechModel monthly_expenses = new();
+
+		// These variables are used to display error or success messages to the user.
 		public string errorMessage = "";
 		public string successMessage = "";
 
@@ -26,26 +28,28 @@ namespace FintechWebApp.Pages.FintechApp
 		/// </summary>
 		public async void OnGet()
 		{
-			// line retrieves the month parameter from the query string of the request.
+			// Retrieve the id parameter from the query string of the request.
 			string id = Request.Query["id"];
+
+			// Create a new HttpClient instance
 			using (var client = new HttpClient())
 			{
-				//These lines create an instance of HttpClient, set the base address
+				// Set the base address of the API
 				client.BaseAddress = new Uri("http://localhost:5264");
-				//HTTP GET
+
+				// Send an HTTP DELETE request to the API with the specified id
 				var responseTask = client.DeleteAsync("/Fintech/DeleteExpense/" + id);
 				responseTask.Wait();
 
-				//If the response was successful, it sets the Month property of the bill object to the month parameter. 
+				// If the response is successful, set the Id property of the monthly_expenses object to the id parameter
 				if (responseTask.Result.IsSuccessStatusCode)
 				{
 					monthly_expenses.Id = int.Parse(id);
-
 				}
-
 			}
 		}
 	}
+
 }
 
 
